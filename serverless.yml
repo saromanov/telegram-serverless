@@ -1,0 +1,19 @@
+service: telegram-serverless
+
+provider:
+  name: aws
+  runtime: nodejs11.8
+  stage: ${opt:stage, 'dev'}
+  region: ${opt:region, 'eu-west-1'}
+
+custom:
+  env: ${file(./${self:provider.stage}.env.json)}
+
+functions:
+  run:
+    handler: handler.run
+    events:
+      - schedule: rate(5 hours)
+    environment:
+      TSL_API_URL: ${self:custom.env.TSL_API_URL}
+      TELEGRAM_KEY: ${self:custom.env.TELEGRAM_KEY}

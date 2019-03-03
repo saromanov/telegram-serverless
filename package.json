@@ -1,0 +1,23 @@
+{
+  "name": "telegram-serverless",
+  "version": "1.0.0",
+  "description": "Telegram bot over serverless",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saromanov/telegram-serverless.git"
+  },
+  "author": "Sergey Romanov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/saromanov/telegram-serverless/issues"
+  },
+  "homepage": "https://github.com/saromanov/telegram-serverless#readme",
+  "dependencies": {
+    "node-telegram-bot-api": "^0.30.0",
+    "serverless": "^1.38.0"
+  }
+}
