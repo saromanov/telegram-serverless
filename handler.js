@@ -1,7 +1,6 @@
 'use strict';
 
-const { getDadJoke } = require('./helpers/jokes');
-const { tweetJoke } = require('./helpers/twitter');
+const { recv } = require('./telegram/telegram');
 
 module.exports.run = (event, context, callback) => {
   
